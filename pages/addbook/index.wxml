@@ -1,0 +1,72 @@
+<!-- pages/addbook/index.wxml -->
+<view class="addbook">
+	<form bindsubmit="onSubmit">
+		<view class="input-group">
+			<view class="title">书名</view>
+			<input
+			 name="name"
+			 value="{{bookInfo.name}}"
+			 placeholder="书名"
+			 confirm-type="next"
+			 adjust-position
+			 focus="true"
+			/>
+		</view>
+		<view class="input-group">
+			<picker
+			 header-text="选择图书分类"
+			 class="title"
+			 mode="selector"
+			 range="{{categories}}"
+			 value="{{cateIndex}}"
+			 bindchange="cateChange"
+			>
+				<view class="picker">
+					类别：
+					<text class="category">{{bookInfo.category||categories[cateIndex]}}</text>
+				</view>
+			</picker>
+		</view>
+		<view class="input-group">
+			<view class="title">作者</view>
+			<input
+			 name="author"
+			 value="{{bookInfo.author}}"
+			 placeholder="作者"
+			 confirm-type="next"
+			/>
+		</view>
+		<view class="input-group">
+			<view class="title">出版社</view>
+			<input
+			 name="publish"
+			 value="{{bookInfo.publish}}"
+			 placeholder="出版社"
+			 confirm-type="next"
+			/>
+		</view>
+		<view class="input-group">
+			<view class="title">简介</view>
+			<textarea
+			 name="desc"
+			 value="{{bookInfo.desc}}"
+			 placeholder="简介，少于200字"
+			 confirm-type="next"
+			/>
+			</view>
+								<view bindtap="addimage" class="addimage">
+												<image class="add" src="../../images/addbook/add.png" mode="aspectFit" lazy-load="false" binderror="" bindload="" />
+								</view>
+								<view class="input-group-check">
+												<label class="title">发布操作：</label>
+												<switch bindtap="switchChange" checked="{{bookInfo.status}}">是否上架</switch>
+								</view>
+								<button id="submit" formType="submit" type="primary">{{operation?"添加图书":"更新图书"}}</button>
+								<button wx:if="{{operation}}" id="reset" formType="reset" type="default">清空数据</button>
+								<view class="image-preview" wx:if="{{bookInfo.imageSrc}}">
+												<image bindtap="imagePreview" data-url="{{bookInfo.imageSrc}}" class="preview" src="{{bookInfo.imageSrc}}" mode="aspectFit" />
+												<image class="delete" bindtap="removeImage" src="../../images/addbook/delete.png" mode="aspectFit"></image>
+								</view>
+				</form>
+</view>
+

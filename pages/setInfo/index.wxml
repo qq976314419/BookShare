@@ -1,0 +1,41 @@
+<!-- pages/register/index.wxml -->
+<view>
+	<view class="input-group">
+		<view class="title">姓名</view>
+		<input
+		 value="{{userInfo.name}}"
+		 bindinput="getUserName"
+		 maxlength="15"
+		 placeholder="请输入姓名"
+		/>
+	</view>
+	<view class="input-group">
+		<view class="title">科室</view>
+		<input
+		 value="{{userInfo.dept}}"
+		 bindinput="getDept"
+		 maxlength="15"
+		 placeholder="请输入科室"
+		/>
+	</view>
+	<view class="input-group">
+		<view class="title">电话</view>
+		<input
+		 value="{{userInfo.phone}}"
+		 bindinput="getPhone"
+		 maxlength="15"
+		 placeholder="请输入电话"
+		/>
+	</view>
+	<view class="input-group">
+		<view class="title">邮箱</view>
+		<input
+		 value="{{userInfo.email}}"
+		 bindinput="getEmail"
+		 maxlength="30"
+		 placeholder="请输入邮箱"
+		/>
+	</view>
+	<button  bindtap='saveInfo' type="primary">保存</button>
+</view>
+

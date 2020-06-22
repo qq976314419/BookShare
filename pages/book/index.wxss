@@ -1,0 +1,89 @@
+/* pages/book/index.wxss */
+scroll-view {
+  width: 100vw;
+  height: calc(100vh - 80px);
+}
+scroll-view .book-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+scroll-view .book-container .book-image {
+  width: 750rpx;
+  height: 500rpx;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+scroll-view .book-container .book-name {
+  height: 50px;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--themeColor);
+  border-bottom: 1px solid #eee;
+}
+scroll-view .book-container .book-info {
+  height: 40px;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+scroll-view .book-container .book-info .info-title {
+  color: #707070;
+  padding-right: 10px;
+}
+scroll-view .book-container .book-desc {
+  display: flex;
+  width: 90vw;
+  flex-direction: column;
+}
+scroll-view .book-container .book-desc .title {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.function-bar {
+  color: #fff;
+  font-size: 18px;
+  position: fixed;
+  height: 60px;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 0 20rpx #d1d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.function-bar .bar-item {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.function-bar .bar-item {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.function-bar .update {
+  background-color: #ffba25;
+}
+.function-bar .borrow {
+  background-color: #ff3131;
+}
+.function-bar .delete {
+  flex: 1 1 auto;
+  background-color: #ff2525;
+}

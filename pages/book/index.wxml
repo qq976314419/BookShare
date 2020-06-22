@@ -1,0 +1,52 @@
+<scroll-view scroll-x='false' scroll-y='true'>
+	<view class="book-container">
+		<view class="book-image">
+			<image bindtap="imagePreview" data-url="{{bookInfo.imageSrc}}" src="{{bookInfo.imageSrc||'../../images/index/BookPlaceholder.png'}}" mode="aspectFit" />
+		</view>
+		<view class="book-name">{{bookInfo.name}}</view>
+		<view class="book-info">
+			<span class="info-title">作者:</span>
+			{{bookInfo.author}}
+		</view>
+		<view class="book-info">
+			<span class="info-title">出版社:</span>
+			{{bookInfo.publish}}
+		</view>
+		<view class="book-info">
+			<span class="info-title">持有人:</span>
+			{{ownerName}}
+		</view>
+		<view class="book-info">
+			<span class="info-title">是否可以借阅:</span>
+			{{bookInfo.status? '可以借阅':"不可借阅"}}
+		</view>
+		<view class="book-info">
+			<span class="info-title">借阅须知:</span>
+			<navigator url="../about/index" open-type="navigate">点击了解借阅规则</navigator>
+		</view>
+		<view class="book-desc">
+			<view class="title">介绍:</view>
+			{{bookInfo.desc}}
+		</view>
+	</view>
+</scroll-view>
+<view class="function-bar">
+	<navigator
+	 wx:if="{{!operation}}"
+	 class="bar-item borrow"
+	 url="../order/index?id={{bookId}}"
+	 open-type="navigate"
+	>
+		借阅
+	</navigator>
+	<navigator
+	 class="bar-item update"
+	 wx:if="{{operation}}"
+	 url="../addbook/index?id={{bookId}}"
+	 open-type="navigate"
+	>
+		更新
+	</navigator>
+	<view bindtap="deleteBook" class="bar-item delete" wx:if="{{operation}}">删除</view>
+</view>
+

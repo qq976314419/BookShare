@@ -1,0 +1,59 @@
+/* pages/mybooks/index.wxss */
+/* pages/books/index.wxss */
+.books-container {
+    view {
+        width: 750rpx;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: center;
+
+        .book-container {
+            width: 250rpx;
+            height: 400rpx;
+            box-sizing: border-box;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:first-child {
+                justify-content: center;
+                align-items: center;
+            }
+
+            image {
+                height: 250rpx;
+                width: 200rpx;
+            }
+
+            .title {
+                width: 220rpx;
+                height: 50rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .status {
+                width: 220rpx;
+                flex: 1 1 auto;
+                font-size: 20rpx;
+                color: #5e5e5e;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .avariable {
+                color: #5d5d5d;
+            }
+
+            .none {
+                color: rgb(255, 77, 77);
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<!-- pages/myorders/index.wxml -->
+<view class="navbar">
+	<view bindtap="getBorrow" class="{{navbarindex==0?'nav-item active':'nav-item'}}">我的申请</view>
+	<view bindtap="getShare" class="{{navbarindex==1?'nav-item active':'nav-item'}}">我的分享</view>
+</view>
+<scroll-view
+ class="lists"
+ scroll-x="false"
+ scroll-y="true"
+ enable-back-to-top="true"
+>
+	<view wx:if='{{lists.length}}' class="lists-card">
+		<block
+		 wx:for="{{lists}}"
+		 wx:for-item="item"
+		 wx:for-index="index"
+		 wx:key="_id"
+		>
+			<view class="list">
+				<view class="order-info">
+					<view class="order-name">{{item.name}}</view>
+					<view class="book-name">
+						申请人:{{item.applierInfo.name}} 部门:{{item.applierInfo.dept}}
+					</view>
+				</view>
+				<view wx:if="{{(item.process=='完成分享')||(item.process=='已取消')||(item.process=='拒绝')}}" class="complete">
+					{{item.process}}
+				</view>
+				<navigator
+				 wx:else
+				 class="openorder"
+				 url="../orderoperation/index?orderId={{item._id}}"
+				 open-type="navigate"
+				>
+					{{item.process}}
+				</navigator>
+			</view>
+		</block>
+	</view>
+	<view wx:else class="nodata">没有可以显示的订单</view>
+</scroll-view>
+

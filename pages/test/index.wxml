@@ -1,0 +1,20 @@
+<!-- pages/addbook/index.wxml -->
+<form bindsubmit="addBook">
+	<view/>
+	<input name="name" placeholder="书名" confirm-type="next" />
+	<input name="category" placeholder="类别" confirm-type="next" />
+	<input name="author" placeholder="作者" confirm-type="next" />
+	<input name="publish" placeholder="出版社" confirm-type="next" />
+	<textarea name="desc" placeholder="简介" confirm-type="next" />
+	<checkbox name="status" confirm-type="done">是否上架</checkbox>
+	<button formType="submit" type="primary">添加图书</button>
+</form>
+<button type="primary" bindtap="getBook">获取图书</button>
+<input placeholder="请输入ID" bindblur="getId" />
+<button type="primary" bindtap="delBook">删除图书</button>
+<input placeholder="请输入ID" bindblur="getId" />
+<button type="primary" bindtap="updateBook">更新图书</button>
+<button type="primary" bindtap="getOpenId">获取open id</button>
+<button type="primary" bindtap="cloudgetbook">云函数获取数据</button>
+<button type="primary" bindtap="uploadimage">上传图片</button>
+

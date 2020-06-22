@@ -1,0 +1,36 @@
+/* pages/managesetting/index.wxss */
+.header {
+  display: flex;
+  height: 30px;
+  background-color: var(--themeColorLight);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+.lists {
+  width: 100vw;
+  height: calc(100vh - 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lists .lists-card {
+  margin: 20rpx;
+  border-radius: 5rpx;
+  box-shadow: 0 0 10rpx #dadada;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rpx 20rpx;
+}
+.lists .lists-card .list {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.lists .lists-card .list:last-child {
+  border: none;
+}

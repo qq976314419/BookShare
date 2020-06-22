@@ -1,0 +1,47 @@
+<view class="header">设置{{action}}</view>
+<scroll-view
+ class="lists"
+ scroll-x="false"
+ scroll-y="true"
+ enable-back-to-top="true"
+>
+	<view wx:if="{{action=='recommend'}}" class="lists-card">
+		<block
+		 wx:for="{{lists}}"
+		 wx:for-item="item"
+		 wx:for-index="index"
+		 wx:key="_id"
+		>
+			<view class="list">
+				<view class="name">{{item.name}}</view>
+				<switch
+				 class="switch"
+				 checked="{{item.recommend}}"
+				 type="switch"
+				 bindchange="switchBookChange"
+				 data-index='{{index}}'
+				/>
+			</view>
+		</block>
+	</view>
+	<view wx:else class="lists-card">
+		<block
+		 wx:for="{{lists}}"
+		 wx:for-item="item"
+		 wx:for-index="index"
+		 wx:key="_id"
+		>
+			<view class="list">
+				<view class="name">{{item.name}}</view>
+				<switch
+				 class="switch"
+				 checked="{{item.role==action}}"
+				 type="switch"
+				 bindchange="switchRole"
+				 data-index='{{index}}'
+				/>
+			</view>
+		</block>
+	</view>
+</scroll-view>
+

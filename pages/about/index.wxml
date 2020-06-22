@@ -1,0 +1,10 @@
+<!-- viewages/about/index.wxml -->
+<view class="header">借书规则</view>
+<view class="detail">1. 图书漂流小程序仅限于公司内部使用。需如实填写科室、电话及邮箱，才可借阅。</view>
+<view class="detail">2. 借书时间：30天</view>
+<view class="detail">3. 借书数量：最多同时借阅2本</view>
+<view class="detail">4. 读者应爱护图书，不得遗失、损坏、撕毁、涂改、批注、折页等。</view>
+<view class="detail">5. 若图书污损，请自行与图书主人解释；若图书丢失，请赔偿原书</view>
+<view class="detail">6. 图书借阅不遵守规则者，禁止借书</view>
+<view class="detail">7. 进行取书/还书操作时，请与借阅人/分享人登录小C确认图书状态</view>
+

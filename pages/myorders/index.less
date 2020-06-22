@@ -1,0 +1,104 @@
+/* pages/myorders/index.wxss */
+
+.navbar {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10rpx rgb(218, 218, 218);
+
+    .nav-item {
+        height: 100%;
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px solid #fff;
+    }
+
+    .active {
+        border-bottom: 3px solid var(--themeColor);
+    }
+}
+
+.lists {
+    font-size: 15px;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .lists-card {
+        margin: 20rpx;
+        border-radius: 5rpx;
+        box-shadow: 0 0 10rpx rgb(218, 218, 218);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10rpx 20rpx;
+
+        .list {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+
+            &:last-child {
+                border: none;
+            }
+
+            .order-info {
+                flex: 1 1 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .order-name {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+
+                .book-name {
+                    color: #5d5d5d;
+                }
+            }
+
+            .openorder {
+                background-color: var(--themeColor);
+                color: #fff;
+                width: 100px;
+                height: 40px;
+                font-size: 15px;
+                font-weight: 400;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .complete {
+                background-color: rgb(177, 177, 177);
+                color: #fff;
+                width: 100px;
+                height: 40px;
+                font-size: 15px;
+                font-weight: 400;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .nodata {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #5d5d5d;
+    }
+}

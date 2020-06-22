@@ -1,0 +1,31 @@
+<!-- pages/mybooks/index.wxml -->
+<scroll-view
+ class="books-container"
+ scroll-x="false"
+ scroll-y="true"
+ lower-threshold="50"
+ scroll-top="0"
+ enable-back-to-top="true"
+>
+	<view>
+		<navigator class="book-container" url="../addbook/index" open-type="navigate">
+			<image mode="aspectFit" src="../../images/me/add.png" />
+			<view class="title">添加</view>
+		</navigator>
+		<block
+		 wx:for="{{bookList}}"
+		 wx:for-item="item"
+		 wx:for-index="index"
+		 wx:key="_id"
+		>
+			<navigator class="book-container" url="../book/index?id={{item._id}}" open-type="navigate">
+				<image mode="aspectFit" src="{{item.imageSrc||'../../images/index/BookPlaceholder.png'}}" />
+				<view class="title">{{item.name}}</view>
+				<view class="{{item.status? 'status avariable':'status none'}}">
+					{{item.status? "已上架":(item.applyStatus? item.applyStatus:'未上架')}}
+				</view>
+			</navigator>
+		</block>
+	</view>
+</scroll-view>
+

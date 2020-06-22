@@ -1,0 +1,95 @@
+<!-- pages/order/index.wxml -->
+<view class="container">
+	<view wx:if="{{operation!='owner'}}" class="info-card">
+		<view class="info-title">借书信息</view>
+		<view class="info-details">
+			<view class="info-content">
+				<view class="content-title">书名</view>
+				<view class="content">{{orderInfo.bookName}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">持有人</view>
+				<view class="content">{{orderInfo.ownerInfo.name}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">科室</view>
+				<view class="content">{{orderInfo.ownerInfo.dept}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">邮箱</view>
+				<view class="content">{{orderInfo.ownerInfo.email}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">手机号</view>
+				<view class="content">{{orderInfo.ownerInfo.phone}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="info-card">
+		<view class="info-title">申请人信息</view>
+		<view class="info-details">
+			<view class="info-content">
+				<view class="content-title">姓名</view>
+				<view class="content">{{orderInfo.applierInfo.name}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">科室</view>
+				<view class="content">{{orderInfo.applierInfo.dept}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">邮箱</view>
+				<view class="content">{{orderInfo.applierInfo.email}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">手机号</view>
+				<view class="content">{{orderInfo.applierInfo.phone}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">申请日期</view>
+				<view class="content">{{orderInfo.applyTimeStr}}</view>
+			</view>
+			<view wx:if="{{(orderProcess=='可以取书')||(orderProcess=='分享中')|| (orderProcess=='申请还书')||(orderProcess=='完成分享')}}" class="info-content">
+				<view class="content-title">取书日期</view>
+				<view class="content">{{orderInfo.startTimeStr}}</view>
+			</view>
+			<view wx:if="{{(orderProcess=='可以取书')||(orderProcess=='分享中')|| (orderProcess=='申请还书')||(orderProcess=='完成分享')}}" class="info-content">
+				<view class="content-title">到期日期</view>
+				<view class="content">{{orderInfo.endTimeStr}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view wx:if="{{operation=='owner'}}" class="function-bar">
+	<view wx:if="{{orderProcess=='新的申请'}}" bindtap="agree" class="bar-item themeBlue">通过</view>
+	<view wx:if="{{orderProcess=='新的申请'}}" bindtap="refuse" class="bar-item themeRed">拒绝</view>
+	<view wx:if="{{orderProcess=='通过申请'}}" class="bar-item themeBlue">申请已通过</view>
+	<view wx:if="{{orderProcess=='通过申请'}}" bindtap="startShare" class="bar-item themeYellow">
+		提醒申请人已可以取书
+	</view>
+	<view wx:if="{{orderProcess=='可以取书'}}" class="bar-item themeBlue">待申请人确认取书</view>
+	<view wx:if="{{orderProcess=='分享中'}}" class="bar-item themeBlue">图书分享中</view>
+	<view wx:if="{{orderProcess=='分享中'}}" bindtap='remind' class="bar-item themeYellow">
+		提醒还书(剩余{{orderInfo.remindTimes}}次)
+	</view>
+	<view wx:if="{{orderProcess=='申请还书'}}" bindtap="complete" class="bar-item themeYellow">
+		确认已归还？
+	</view>
+	<view wx:if="{{orderProcess=='完成分享'}}" class="bar-item themeGrey">借书已结束</view>
+	<view wx:if="{{orderProcess=='拒绝'}}" class="bar-item themeGrey">已拒绝申请</view>
+	<view wx:if="{{orderProcess=='已取消'}}" class="bar-item themeGrey">用户取消</view>
+</view>
+<view wx:if="{{operation=='applier'}}" class="function-bar">
+	<view wx:if="{{orderProcess=='新的申请'}}" bindtap="cancel" class="bar-item themeRed">取消申请</view>
+	<view wx:if="{{orderProcess=='通过申请'}}" class="bar-item themeBlue">申请已通过</view>
+	<view wx:if="{{orderProcess=='可以取书'}}" bindtap="sharing" class="bar-item themeYellow">
+		是否已取书
+	</view>
+	<view wx:if="{{orderProcess=='分享中'}}" class="bar-item themeBlue">图书分享中</view>
+	<view wx:if="{{orderProcess=='分享中'}}" bindtap="returnBook" class="bar-item themeYellow">
+		归还图书
+	</view>
+	<view wx:if="{{orderProcess=='申请还书'}}" class="bar-item themeYellow">申请归还中...</view>
+	<view wx:if="{{orderProcess=='完成分享'}}" class="bar-item themeGrey">借书已结束</view>
+	<view wx:if="{{orderProcess=='已取消'}}" class="bar-item themeGrey">申请已取消</view>
+</view>
+

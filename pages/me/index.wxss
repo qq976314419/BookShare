@@ -1,0 +1,122 @@
+/* pages/me/index.wxss */
+/* pages/me/index.wxss */
+.myinfos {
+  background-color: var(--themeBackgrounGrey);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 750rpx;
+}
+.myinfos .infos-header {
+  height: 200px;
+  padding: 0 30rpx;
+  background-color: var(--themeColor);
+  border-top: solid 1px #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.myinfos .infos-header .my-setting {
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.myinfos .infos-header .my-setting .setting-text {
+  color: #ffffff;
+  font-size: 30rpx;
+  padding-right: 15rpx;
+}
+.myinfos .infos-header .my-setting .setting-icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+.myinfos .infos-header .my-info {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  padding-top: 10px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.myinfos .infos-header .my-info .user-avatar {
+  display: block;
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 65rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+.myinfos .infos-header .my-info .account-info {
+  display: flex;
+  margin-left: 20rpx;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.myinfos .infos-header .my-info .account-info navigator .user-name {
+  padding-top: 10px;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+}
+.myinfos .infos-header .my-info .account-info navigator .active-value {
+  font-size: 15px;
+  color: #ff8800;
+}
+.myinfos .infos-header .my-favoritor {
+  height: 60px;
+}
+.myinfos .function-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 5px 15rpx;
+  background-color: #fff;
+  border-radius: 4px;
+  flex-wrap: wrap;
+}
+.myinfos .function-card .function-header {
+  color: var(--themeGreyText);
+  height: 30px;
+  width: 690rpx;
+  font-size: 15px;
+  margin: 0 15rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.myinfos .function-card .function-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.myinfos .function-card .function-list .list-item {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  height: 150rpx;
+  width: 150rpx;
+  margin: 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #eee;
+}
+.myinfos .function-card .function-list .list-item image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.myinfos .function-card .function-list .list-item .title {
+  color: #5d5d5d;
+  font-size: 20rpx;
+}

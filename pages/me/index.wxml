@@ -1,0 +1,72 @@
+<!-- pages/me/index.wxml -->
+<view class="myinfos">
+	<view class="infos-header">
+		<navigator class="my-setting" url="../setInfo/index" open-type="navigate">
+			<p class="setting-text">设置</p>
+			<image class="setting-icon" src="../../images/me/setting.png" mode="widthFix" />
+		</navigator>
+		<view class="my-info">
+			<view class="user-avatar">
+				<open-data type="userAvatarUrl" />
+			</view>
+			<view class="account-info">
+				<navigator url="../setInfo/index" open-type="navigate">
+					<view class="user-name">{{userInfo.name? userInfo.name:"未填写"}}</view>
+					<view class="active-value">资料完善度:{{userInfo.infoStatus? "完善":"未完善"}}</view>
+				</navigator>
+			</view>
+		</view>
+		<view class="my-favoritor" />
+	</view>
+	<view class="function-card">
+		<view class="function-header">
+			<p>功能</p>
+			<p>></p>
+		</view>
+		<view class="function-list">
+			<navigator class="list-item" url="../mybooks/index" open-type="navigate">
+				<image src="../../images/me/book.png" mode="aspectFit" />
+				<view class="title">我的图书</view>
+			</navigator>
+			<navigator class="list-item" url="../myorders/index" open-type="navigate">
+				<image src="../../images/me/order.png" mode="aspectFit" />
+				<view class="title">借阅管理</view>
+			</navigator>
+			<navigator class="list-item" url="../about/index" open-type="navigate">
+				<image src="../../images/me/about.png" mode="aspectFit" />
+				<view class="title">借书规则</view>
+			</navigator>
+		</view>
+	</view>
+	<view wx:if='{{userInfo.role=="manage"||userInfo.role=="supmanage"}}' class="function-card">
+		<view class="function-header">
+			<p>管理员功能</p>
+			<p>></p>
+		</view>
+		<view class="function-list">
+			<navigator
+			 wx:if='{{userInfo.role=="supmanage"}}'
+			 class="list-item"
+			 url="../managesetting/index?action=supmanage"
+			 open-type="navigate"
+			>
+				<image src="../../images/me/service.png" mode="aspectFit" />
+				<view class="title">设置超级管理员</view>
+			</navigator>
+			<navigator
+			 wx:if='{{userInfo.role=="supmanage"}}'
+			 class="list-item"
+			 url="../managesetting/index?action=manage"
+			 open-type="navigate"
+			>
+				<image src="../../images/me/service.png" mode="aspectFit" />
+				<view class="title">设置管理员</view>
+			</navigator>
+			<navigator class="list-item" url="../managesetting/index?action=recommend" open-type="navigate">
+				<image src="../../images/me/order.png" mode="aspectFit" />
+				<view class="title">设置推荐</view>
+			</navigator>
+		</view>
+	</view>
+</view>
+

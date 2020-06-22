@@ -1,0 +1,91 @@
+/* pages/myorders/index.wxss */
+.navbar {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10rpx #dadada;
+}
+.navbar .nav-item {
+  height: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #fff;
+}
+.navbar .active {
+  border-bottom: 3px solid var(--themeColor);
+}
+.lists {
+  font-size: 15px;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lists .lists-card {
+  margin: 20rpx;
+  border-radius: 5rpx;
+  box-shadow: 0 0 10rpx #dadada;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rpx 20rpx;
+}
+.lists .lists-card .list {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.lists .lists-card .list:last-child {
+  border: none;
+}
+.lists .lists-card .list .order-info {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.lists .lists-card .list .order-info .order-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.lists .lists-card .list .order-info .book-name {
+  color: #5d5d5d;
+}
+.lists .lists-card .list .openorder {
+  background-color: var(--themeColor);
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lists .lists-card .list .complete {
+  background-color: #b1b1b1;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lists .nodata {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5d5d5d;
+}

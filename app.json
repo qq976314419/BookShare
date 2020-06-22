@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/books/index",
+    "pages/me/index",
+    "pages/book/index",
+    "pages/order/index",
+    "pages/mybooks/index",
+    "pages/myorders/index",
+    "pages/addbook/index",
+    "pages/about/index",
+    "pages/setInfo/index",
+    "pages/managesetting/index",
+    "pages/orderoperation/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "小C图书漂流馆",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "小C的推荐",
+        "iconPath": "images/navbar/news-inactive.png",
+        "selectedIconPath": "images/navbar/news-active.png"
+      },
+      {
+        "pagePath": "pages/books/index",
+        "text": "小C的书屋",
+        "iconPath": "images/navbar/home-inactive.png",
+        "selectedIconPath": "images/navbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的小C",
+        "iconPath": "images/navbar/me-inactive.png",
+        "selectedIconPath": "images/navbar/me-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

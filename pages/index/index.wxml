@@ -1,0 +1,47 @@
+<view>
+	<view class="header-messages">更新推荐</view>
+	<swiper class="swiper-container" indicator-dots circular>
+		<block
+		 wx:for="{{bookList}}"
+		 wx:for-item="item"
+		 wx:for-index="index"
+		 wx:key="id"
+		>
+			<swiper-item>
+				<view  class="item-card">
+					<navigator url="../book/index?id={{item._id}}" open-type="navigate">
+						<view class="image">
+							<image mode="aspectFit" src="{{item.imageSrc||'../../images/index/BookPlaceholder.png'}}" />
+						</view>
+						<view class="title">{{item.name}}</view>
+						<view class="content-info">
+							<view class="category">
+								<h3>分类：</h3>
+								<p>{{item.category}}</p>
+							</view>
+							<view class="summary">简介：{{item.desc}}</view>
+						</view>
+					</navigator>
+				</view>
+			</swiper-item>
+		</block>
+		<swiper-item wx:if="{{bookList.length==0}}">
+			<view class="item-card">
+				<navigator>
+					<view class="image">
+						<image mode="aspectFit" src="../../images/index/BookPlaceholder.png" />
+					</view>
+					<view class="title">没有可推荐的书籍</view>
+					<view class="content-info">
+						<view class="category">
+							<h3>分类：</h3>
+							<p>分类</p>
+						</view>
+						<view class="summary">简介：简介</view>
+					</view>
+				</navigator>
+			</view>
+		</swiper-item>
+	</swiper>
+</view>
+

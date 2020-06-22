@@ -1,0 +1,149 @@
+{
+	"description": "项目配置文件",
+	"cloudfunctionRoot": "cloud/",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enhance": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wx388cedf057185a6e",
+	"projectname": "BookShare",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "addbook",
+					"pathName": "pages/addbook/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "book-detail",
+					"pathName": "pages/book/index",
+					"query": "id=05f2c36f5eaf8bef000821746bcdcd42",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "books",
+					"pathName": "pages/books/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "me",
+					"pathName": "pages/me/index",
+					"query": "openid=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mybooks",
+					"pathName": "pages/mybooks/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/setInfo/index",
+					"pathName": "pages/setInfo/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "order",
+					"pathName": "pages/order/index",
+					"query": "id=e62331e95e95c80b000887d949a4a9bf",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "mannage",
+					"pathName": "pages/managesetting/index",
+					"query": "action=supmanage",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "myorders",
+					"pathName": "pages/myorders/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "orderoperation",
+					"pathName": "pages/orderoperation/index",
+					"query": "orderId=3f8c212f5ea79dea006ed1de2fb490ff",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "pages/about/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

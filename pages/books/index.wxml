@@ -1,0 +1,26 @@
+<!-- pages/books/index.wxml -->
+<scroll-view
+ class="books-container"
+ scroll-x="false"
+ scroll-y="true"
+ lower-threshold="50"
+ scroll-top="0"
+ enable-back-to-top="true"
+>
+	<view>
+		<block
+		 wx:for="{{bookList}}"
+		 wx:for-item="item"
+		 wx:for-index="index"
+		 wx:key="_id"
+		>
+			<navigator class="book-container" url="../book/index?id={{item._id}}" open-type="navigate">
+				<image mode="aspectFit" src="{{item.imageSrc||'../../images/index/BookPlaceholder.png'}}" />
+				<view class="title">{{item.name}}</view>
+				<view class="content">{{item.desc}}</view>
+			</navigator>
+		</block>
+		<view wx:if="{{bookList.length==0}}">暂时没有可以借阅的书籍</view>
+	</view>
+</scroll-view>
+

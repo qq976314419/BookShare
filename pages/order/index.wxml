@@ -1,0 +1,66 @@
+<!-- pages/order/index.wxml -->
+<view class="container">
+	<view class="info-card">
+		<view class="info-title">借书信息</view>
+		<view class="info-details">
+			<view class="info-content">
+				<view class="content-title">书名</view>
+				<view class="content">{{bookInfo.name}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">持有人</view>
+				<view class="content">{{ownerInfo.name}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">科室</view>
+				<view class="content">{{ownerInfo.dept}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">邮箱</view>
+				<view class="content">{{ownerInfo.email}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">手机号</view>
+				<view class="content">{{ownerInfo.phone}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">借书日期</view>
+				<view class="content">待定</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">预期还书日期</view>
+				<view class="content">待定</view>
+			</view>
+		</view>
+	</view>
+	<view class="info-card">
+		<view class="info-title">申请人信息</view>
+		<view class="info-details">
+			<view class="info-content">
+				<view class="content-title">姓名</view>
+				<view class="content">{{userInfo.name}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">科室</view>
+				<view class="content">{{userInfo.dept}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">邮箱</view>
+				<view class="content">{{userInfo.email}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">手机号</view>
+				<view class="content">{{userInfo.phone}}</view>
+			</view>
+			<view class="info-content">
+				<view class="content-title">申请日期</view>
+				<view class="content">{{date.dateNowStr}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="function-bar">
+	<view bindtap="apply" wx:if="{{operation}}" class="bar-item borrow">申请</view>
+	<view wx:if="{{!operation}}" class="bar-item disable">申请</view>
+</view>
+
